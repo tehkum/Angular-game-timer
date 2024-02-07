@@ -1,0 +1,24 @@
+<div class="game">
+  <div class="playground">
+    <p>{{ counter }}</p>
+  </div>
+  <div class="btn-grp">
+    <button class="start" (click)="startGame()" [disabled]="gameStarted">
+      {{ counter > 0 ? "Resume Game" : "Start Game" }}
+    </button>
+    <button class="stop" (click)="stopGame()" [disabled]="!gameStarted">
+      Stop Game
+    </button>
+    <button
+      class="reset-button"
+      (click)="resetGame()"
+      [disabled]="counter === 0"
+    >
+      Reset
+    </button>
+  </div>
+  <div class="game-instructions" *ngFor="let i of scoreBoard">
+    <app-even [gameCounter]="i" *ngIf="i % 2 === 0"></app-even>
+    <app-odd [gameCounter]="i" *ngIf="i % 2 !== 0"></app-odd>
+  </div>
+</div>

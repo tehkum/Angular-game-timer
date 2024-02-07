@@ -1,0 +1,18 @@
+.odd-play {
+    color: white;
+    background-color: red;
+    border: 1px solid red;
+    cursor: pointer;
+}
+
+.odd-play:hover {
+    background-color: darkred;
+}
+
+.odd-play p {
+    margin: 0;
+    padding: 5px 10px;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
